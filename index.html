@@ -2,15 +2,63 @@
 <html>
   <head>
     <title>Rock, Scissors, Paper</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
-    <button id="rock" onclick="playerChoice('rock')">Rock</button>
-    <button id="paper" onclick="playerChoice('paper')">Paper</button>
-    <button id="scissors" onclick="playerChoice('scissors')">Scissors</button>
-    <div id="resultText"></div>
-    <div id="resultActual"></div>
-    <div id="p1Score"></div>
-    <div id="cpuScore"></div>
+    <div id="mainContainer">
+      <h1 id="title">Let's play Rock, Paper, Scissors!</h1>
+      <div class="gameSection">
+        <div class="sectionTitle">
+          <h2>You</h2>
+        </div>
+        <div class="buttonHolder" id="playerSection">
+          <button id="pRock" onclick="playerChoice('rock')">
+            <i class="fa fa-hand-rock"></i>
+          </button>
+          <button id="pPaper" onclick="playerChoice('paper')">
+            <i class="fa fa-hand-paper"></i>
+          </button>
+          <button id="pScissors" onclick="playerChoice('scissors')">
+            <i class="fa fa-hand-scissors"></i>
+          </button>
+        </div>
+        <div class="scores">
+          <div id="p1Score"></div>
+        </div>
+      </div>
+      <div class="gameSection">
+        <div class="sectionTitle">
+          <h2>Computer</h2>
+        </div>
+        <div class="buttonHolder" id="compSection">
+          <div id="cRock">
+            <i class="fa fa-hand-rock"></i>
+          </div>
+          <div id="cPaper">
+            <i class="fa fa-hand-paper"></i>
+          </div>
+          <div id="cScissors">
+            <i class="fa fa-hand-scissors"></i>
+          </div>
+        </div>
+        <div class="scores">
+          <div id="cpuScore"></div>
+        </div>
+      </div>
+      <div id="resultOverlay">
+        <p id="resultText"></p>
+        <p id="resultActual"></p>
+        <button id="close" onclick="okSelect()">
+          <i class="fa fa-thumbs-up"></i>
+        </button>
+      </div>
+    </div>
+    
+
+
+    
+    
 
     <script src="./index.js"></script>
   </body>
